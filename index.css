@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+
+.apple{
+    position: absolute;
+
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.apple a{
+    text-decoration: none;
+}
+
+.apple img{
+    width:200px;
+    height:200px;
+}
+
+.apple span{
+    color: white;
+    background-color: black;
+
+    position: absolute;
+    top:50%;
+    left:100%;
+
+    transform: translate(0%,-50%);
+
+    width: 100px;
+    height: 50px;
+
+    text-align: center;
+    line-height: 50px;
+
+    text-transform: uppercase;
+
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.apple span::after{
+    content: "";
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top:0px;
+    left:100%;
+
+    background-color: white;
+
+    transition-duration: 0.5s;
+    z-index: -1;
+}
+
+.apple:hover span{
+    color:black;
+}
+
+.apple:hover span::after{
+    left:0px;
+}
+
+.apple::after{
+    content: "";
+
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top:0px;
+    right: 0px;
+    background-color: black;
+
+    transition-duration: 0.5s;
+    z-index: -1;
+}
+
+.apple:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
